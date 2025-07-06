@@ -1,27 +1,47 @@
 {
+  // TypeScriptコンパイラのオプション設定
   "compilerOptions": {
+    // tsbuildinfoファイルの出力先
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // 出力するJavaScriptのターゲットバージョン
     "target": "ES2022",
+    // クラスフィールドをdefineで出力
     "useDefineForClassFields": true,
+    // 利用するライブラリ
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    // モジュールシステム
     "module": "ESNext",
+    // 型定義ファイルのチェックをスキップ
     "skipLibCheck": true,
 
     /* Bundler mode */
+    // バンドラーモードのモジュール解決
     "moduleResolution": "bundler",
+    // .ts拡張子付きのimportを許可
     "allowImportingTsExtensions": true,
+    // import/export文をそのまま出力
     "verbatimModuleSyntax": true,
+    // モジュール検出モード
     "moduleDetection": "force",
+    // JavaScriptファイルを出力しない
     "noEmit": true,
+    // JSXの変換方法（React 17以降の新方式）
     "jsx": "react-jsx",
 
     /* Linting */
+    // 厳格な型チェック
     "strict": true,
+    // 未使用のローカル変数をエラーにする
     "noUnusedLocals": true,
+    // 未使用のパラメータをエラーにする
     "noUnusedParameters": true,
+    // 消去可能な構文のみ許可
     "erasableSyntaxOnly": true,
+    // switch文のフォールスルーを禁止
     "noFallthroughCasesInSwitch": true,
+    // 副作用のあるimportを禁止
     "noUncheckedSideEffectImports": true
   },
+  // 型チェック対象のファイル
   "include": ["src"]
 }
